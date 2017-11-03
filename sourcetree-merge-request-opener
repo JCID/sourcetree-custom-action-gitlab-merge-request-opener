@@ -1,0 +1,21 @@
+#!/usr/local/bin/php
+<?php
+
+require_once 'vendor/autoload.php';
+
+$repoPath  = $argv[1];
+$iniConfig = parse_ini_file(
+    sprintf(
+        '%s/.git/config',
+        $repoPath
+    )
+);
+$repoUrl   = $iniConfig['url'];
+$repoUrl   = str_replace(
+    [':', 'git@', '.git',],
+    ['/', 'https://', '/'],
+    $repoUrl
+);
+
+$openCommand = sprintf('open "%smerge_requests/new?merge_request[source_branch]="$(git rev-parse --abbrev-ref HEAD) -a "Google Chrome"', $repoUrl);
+exec($openCommand);

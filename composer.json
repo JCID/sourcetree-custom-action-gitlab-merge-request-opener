@@ -1,0 +1,24 @@
+{
+    "name": "jcid/sourcetree-merge-request-opener",
+    "description": "An Sourcetree custom action for opening an Gitlab merge request window in the Google Chrome browser",
+    "license": "MIT",
+    "keywords": [
+        "sourcetree",
+        "gitlab",
+        "merge request"
+    ],
+    "authors": [
+        {
+            "name": "Jeffrey Cafferata",
+            "email": "jeffrey@jcid.nl"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/JCID/sourcetree-custom-action-gitlab-merge-request-opener/issues"
+    },
+    "require": {
+    },
+    "bin": [
+        "sourcetree-merge-request-opener"
+    ]
+}

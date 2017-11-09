@@ -8,6 +8,10 @@ An small tool that will open the Google Chrome browser to create an new Gitlab m
 composer global require jcid/sourcetree-merge-request-opener
 ```
 
+```bash
+cd ~/.composer/vendor/jcid/sourcetree-merge-request-opener && composer dump-autoload
+```
+
 # Why?
 
 Why was this built? Because Jira has indicated that they will not support Gitlab's own instances. For more information you can read here: 

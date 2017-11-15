@@ -1,7 +1,12 @@
 #!/usr/local/bin/php
 <?php
 
-require_once 'vendor/autoload.php';
+foreach (array(__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php') as $file) {
+    if (file_exists($file)) {
+        require $file;
+        break;
+    }
+}
 
 $repoPath  = $argv[1];
 $iniConfig = parse_ini_file(

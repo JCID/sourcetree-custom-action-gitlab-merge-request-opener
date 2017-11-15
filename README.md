@@ -29,8 +29,7 @@ Add an new `Custom Action` with the values
 |---------------|--------------------------------------------------------------------|
 | Menu Caption | `Create Gitlab merge request` |
 | Shortcut | ⌘ = |
-| Script to run | `/Users/jcid/.composer/vendor/bin/sourcetree-merge-request-opener` |
-| | *Replace the `jcid` username for your own username* |
+| Script to run | `~/.composer/vendor/bin/sourcetree-merge-request-opener` |
 | Parameters | `$REPO` |
 
 ![Sourcetree custom action configuration](img/sourcetree-custom-action-configuration.png)

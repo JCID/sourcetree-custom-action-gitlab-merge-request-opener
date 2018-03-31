@@ -13,9 +13,10 @@ $iniConfig = parse_ini_file(
     sprintf(
         '%s/.git/config',
         $repoPath
-    )
+    ),
+    true
 );
-$repoUrl   = $iniConfig['url'];
+$repoUrl   = $iniConfig['remote origin']['url'];
 $repoUrl   = str_replace(
     [':', 'git@', '.git',],
     ['/', 'https://', '/'],

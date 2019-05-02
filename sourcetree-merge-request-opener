@@ -23,5 +23,5 @@ $repoUrl   = str_replace(
     $repoUrl
 );
 
-$openCommand = sprintf('open "%smerge_requests/new?merge_request[source_branch]="$(git rev-parse --abbrev-ref HEAD) -a "Google Chrome"', $repoUrl);
+$openCommand = sprintf('open "%smerge_requests/new?merge_request[force_remove_source_branch]=1&merge_request[source_branch]="$(git rev-parse --abbrev-ref HEAD) -a "Google Chrome"', $repoUrl);
 exec($openCommand);
